@@ -17,7 +17,6 @@
          <link rel="stylesheet" href="{{asset('public')}}/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{asset('public')}}/css/style.css">
          
-X
     </head>
     <body class="sb-nav-fixed">
 
@@ -59,30 +58,47 @@ X
                             
                             <a class="nav-link" href="{{url('/')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                HOME
+             HOME
                             </a>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Dropdown
+                Student info:
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{asset('public/backend')}}/layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="{{asset('public/backend')}}/layout-sidenav-light.html">Light Sidenav</a>
+
+
+                        <a class="nav-link" href="{{route('students')}}">All Students</a>
+                        <a class="nav-link" href="{{asset('public/backend')}}">Light Sidenav</a>
+
+
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="{{route('login')}}" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Login
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+
+
+
+                          </a>
+                            <a class="nav-link" href="{{route('login')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                Login
                             </a>
+
+
+<?php
+$admin=Session::get('name');
+if(isset($admin))
+{
+    echo "Now login: ".' '. $admin;
+}
+    ?>
 
                           </a>
                             <a class="nav-link" href="{{route('logout')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Logout
+                Logout
                             </a>
 
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
@@ -139,9 +155,11 @@ X
 
                         </div>
                     </div>
+                   
+
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Logged in as: Admin
+                            </div>
                     </div>
                 </nav>
             </div>
@@ -149,81 +167,11 @@ X
 
 
 
-                  <div class="wrapper"><!--start Wrapper-->
-
-
-                    {{--sidebar+content start--}}
-                    <div class="container">
-                        <div class="row">
-
-                           <div class="col-md-10"><!--mainContent start-->
                 
 @yield('main_content')
                       
                 <footer class="py-4 bg-light mt-auto">
-                    </div> <!--end of MainContent-->
-                                    <div class="col-md-2"><!--Right sidebar start-->
-                                    <ul class="list-group">
-                                      <li class="list-group-item active">
-                                                   <?php
-$admin=Session::get('name');
-if(isset($admin))
-{
-    echo "I am ".' '. $admin;
-}
-    ?>
- 
-                                      </li>
-                                      <li class="list-group-item">
- <a class="navbar-brand ps-4" href="{{url('/')}}"><strong>Home</strong></a>
-                                      </li>
-                                      <li class="list-group-item">
- <a class="navbar-brand ps-1" href="https://www.facebook.com/"target="_blank">Facebook</a>
-                                      </li>
-                                      <li class="list-group-item">
-<a class="navbar-brand ps-1" href="https://www.youtube.com/"target="_blank">Youtube</a>
-                                      </li>
-                                        <li class="list-group-item">
- <a class="navbar-brand ps-1" href="https://karimfiroz.github.io/firoz/"target="_blank">My Site</a>
-                                      </li>
-                                      <li class="list-group-item">
-<a class="navbar-brand ps-1" href="http://firozlearninghome.blogspot.com/"target="_blank">My Blog</a>
-                                      </li>
-                                        <li class="list-group-item">
- <a class="navbar-brand ps-1" href="https://www.youtube.com/channel/UCbFXTWcyecmV4_CT3AcsDPw/playlists"target="_blank">My Youtube</a>
-                                      </li>
-                                      <li class="list-group-item">
-<a class="navbar-brand ps-1" href="https://firozshah.github.io/school/"target="_blank">School Web</a>
-                                      </li>
-                                        <li class="list-group-item">
- <a class="navbar-brand ps-1" href="https://firozshahschool.blogspot.com/"target="_blank">School Blog</a>
-                                      </li>
-                                      <li class="list-group-item">
-<a class="navbar-brand ps-1" href="https://almodina.com/"target="_blank">Al Modina</a>
-                                      </li>
-                                        <li class="list-group-item">
- <a class="navbar-brand ps-1" href="https://www.youtube.com/channel/UCpYnRIF2FmVXFjxNFeuv1Og/videos"target="_blank">News Exposure</a>
-                                      </li>
-                                      <li class="list-group-item">
-<a class="navbar-brand ps-1" href="http://www.jagobd.com/ntveurope"target="_blank">Bangla TV</a>
-                                      </li>
-                                    </ul>
-                                </div> <!--end of Right sidebar-->
-                            </footer>
-                        </div><!--end of mainContent-->
-                    </div><!--end of row-->
-                </div><!--end of container-->
-                  {{--sidebar+content end--}}
-            </div> <!--end of wrapper--> 
-        </div>
-
-                                       
-
-                                  
-                                      
-                                       
-
-                                   
+                         
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2021</div>

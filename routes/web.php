@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,18 +19,16 @@ Route::get('/', function () {
 |
 */
 
-
 Route::get('/', [AdminController::class, 'index'])->name('welcome');
-
 Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
-Route::get('/logout', [SuperAdminController::class, 'logout'])->name('logout');
 
-
+//Authendicate
 Route::get('/login', [AdminController::class, 'login'])->name('login');
+Route::get('/logout', [SuperAdminController::class, 'logout'])->name('logout');
 Route::post('/admin-login-check', [AdminController::class, 'adminLoginCheck']);
 
 
 
 
 
-
+Route::get('/students', [StudentController::class, 'index'])->name('students');

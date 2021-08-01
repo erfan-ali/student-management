@@ -37,7 +37,7 @@ public function login()
     {
         return view('pages.admin.login');
     }else{
-return redirect->route('dashboard')->send();
+return redirect()->route('dashboard')->send();
     }
 
 }

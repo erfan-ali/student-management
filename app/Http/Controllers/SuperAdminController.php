@@ -29,7 +29,7 @@ private function authCheck(){
     {
     return;
     }else{
-return redirect->route('login')->send();
+return redirect()->route('login')->send();
     }
 }
 
