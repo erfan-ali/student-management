@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
+
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
@@ -14,7 +15,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('pages.student.index');
+        $students=Student::orderBy('reg_id','desc')->get();
+        return view('pages.student.index')->with('students', $students);
     }
 
     /**
@@ -22,9 +24,9 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function student_create()
     {
-        //
+        return view('pages.student.student_create');
     }
 
     /**
@@ -33,9 +35,30 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function student_store(Request $request)
+    {//insery data into students table
+         $this->validate($request,[
+            'reg_id'=>'required',
+'name'=>'required|string|max:15',
+'password'=>'required|min:6'
+
+        ]);
+
+        $student=new Student();
+        
+        $student->reg_id=$request->reg_id;
+        $student->roll=$request->roll;
+        $student->name=$request->name;
+        $student->fname=$request->fname;
+        $student->mname=$request->mname;
+        $student->department=$request->department;
+        $student->info=$request->info;
+        $student->academy=$request->academy;
+        $student->name=$request->name;
+        $student->password=$request->password;
+        $student->mobile=$request->mobile;
+        $student->save();
+        return redirect()->route('students');
     }
 
     /**
@@ -55,21 +78,31 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function student_edit($id)
     {
-        //
+        $student=Student::find($id);
+        return view('pages.student.student_edit')->with('student',$student);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Student $student)
-    {
-        //
+    
+    public function student_update(Request $request,$id)
+    
+    {//insery data into students table
+        $student=Student::find($id);
+
+        $student->reg_id=$request->reg_id;
+        $student->roll=$request->roll;
+        $student->name=$request->name;
+        $student->fname=$request->fname;
+        $student->mname=$request->mname;
+        $student->department=$request->department;
+        $student->info=$request->info;
+        $student->academy=$request->academy;
+        $student->name=$request->name;
+        $student->password=$request->password;
+        $student->mobile=$request->mobile;
+        $student->save();
+        return redirect()->route('students');
     }
 
     /**
@@ -78,8 +111,10 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function student_delete($id)
     {
-        //
+       $student=Student::find($id);
+       $student->delete();
+       return redirect()->route('students');
     }
 }

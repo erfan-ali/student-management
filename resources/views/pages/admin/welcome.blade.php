@@ -2,11 +2,14 @@
 @section('title','Home Page')
 @section('main_content')
  
+
  <div class="container">
   <div class="row">
     <div class="col-md-4">
       Tutorials  
           <ul>
+            
+    
             <li><a class="dropdown-item" href="https://www.youtube.com/c/RuhulAcademy/playlists"target="_blank">Ruhul Academy</a></li>
             
             
@@ -68,7 +71,8 @@
               <li><a class="dropdown-item" href="https://www.instagram.com/"target="_blank">Instragram</a></li>
               
                
-                  <li><a class="dropdown-item" href="https://www.youtube.com/"target="_blank">Youtube</a></li>
+              <li><a class="dropdown-item" href="https://www.youtube.com/watch?v
+            =lGCiQrfR00U&ab_channel=SOMOYTV"target="_blank">Youtube</a></li>    
                   
              
             <li><a class="dropdown-item" href="https://www.youtube.com/c/HujurTv24/playlists"target="_blank">Hujur TV 24</a></li>
@@ -84,7 +88,7 @@
           
             <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCcm0MZDyUkiJKbYBP2t2FdA/videos"target="_blank">Islamic Story</a></li>
             
-            
+             <li><a class="dropdown-item" href="https://www.google.com/maps/place/%E0%A6%96%E0%A6%BE%E0%A6%A8+%E0%A6%86%E0%A6%AE+%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%BE%E0%A6%A8/@24.6952978,88.1626589,3a,90y,287.97h,86.96t/data=!3m6!1e1!3m4!1sCtJKuvICAd8C4fdrPvEjtQ!2e0!7i13312!8i6656!4m14!1m6!3m5!1s0x39fa4d53fba933f7:0xa6564f5a70e93c77!2z4KaX4KeL4Kaq4Ka-4Kay4Kao4KaX4KawIOCmleCnh-CmqOCnjeCmpuCnjeCmsOCngOCmr-CmvCDgppzgpr7gpq7gp4cg4Kau4Ka44Kac4Ka_4Kam4KWk!8m2!3d24.6967331!4d88.1633378!3m6!1s0x39fa4d52045a524f:0xeec3a1d591d53247!8m2!3d24.6917698!4d88.1637004!14m1!1BCgIgARICCAI?rapsrc=apiv3"target="_blank">Google Map</a></li>
                
             <li><a class="dropdown-item" href="https://www.instantstreetview.com/@24.695299,88.162665,260.93h,-28.48p,0.12z,CtJKuvICAd8C4fdrPvEjtQ"target="_blank">Street View</a></li>
             
@@ -92,7 +96,7 @@
                   
             <li><a class="dropdown-item" href="https://www.youtube.com/c/TravelShooters/videos"target="_blank">Travel Shooters</a></li>
             
-             <li><a class="dropdown-item" href=" http://resume.firozlearninghome.com/"target="_blank">Resume Template</a></li>
+             
             
         
           </ul>
@@ -188,7 +192,7 @@
 
            <li><a class="dropdown-item" href="https://thedailycampus.com/"target="_blank">The Daily Campas</a></li> 
 
-
+            <li><a class="dropdown-item" href=" http://resume.firozlearninghome.com/"target="_blank">Resume Template</a></li>
           </ul> 
 
 
@@ -257,8 +261,7 @@ TV
             <li><a class="dropdown-item" href="https://www.desifree.tv/news18-bangla/"target="_blank">News 18</a></li>
             
     
-            <li><a class="dropdown-item" href="https://www.youtube.com/watch?v
-            =lGCiQrfR00U&ab_channel=SOMOYTV"target="_blank">Youtube</a></li>
+           
             
             
     
@@ -299,4 +302,5 @@ TV
             
          </div>
 </div>
+
 @endsection

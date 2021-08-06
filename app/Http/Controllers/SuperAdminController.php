@@ -18,7 +18,7 @@ class SuperAdminController extends Controller
          
         $this->authCheck();
     
-         return view('pages.admin.dashboard');
+         return view('pages.superAdmin.dashboard');
     }
 
 private function authCheck(){
@@ -29,7 +29,7 @@ private function authCheck(){
     {
     return;
     }else{
-return redirect()->route('login')->send();
+return redirect()->route('admin_login')->send();
     }
 }
 
@@ -39,8 +39,8 @@ public function logout()
 Session::put('admin_id','');
 Session::put('name','');
 Session::put('message','You are successfully logout!!');
-return redirect()->route('login');
-    return view('pages.admin.logout ');
+return redirect()->route('admin_login');
+    return view('pages.superAdmin.logout ');
 }
 
 

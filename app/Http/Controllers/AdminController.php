@@ -27,7 +27,7 @@ class AdminController extends Controller
     
 
    
-public function login()
+public function admin_login()
 {
 
     
@@ -35,7 +35,7 @@ public function login()
 
     if($admin_id ==NULL)
     {
-        return view('pages.admin.login');
+        return view('pages.admin.admin_login');
     }else{
 return redirect()->route('dashboard')->send();
     }
@@ -60,7 +60,7 @@ Session::put('name',$result->name);
 return redirect()->route('dashboard');
 }else{
     Session::put('exception','User id or Password invalid!');
-    return redirect()->route('login');
+    return redirect()->route('admin_login');
 }
 
     return view('pages.admin.dashboard');
