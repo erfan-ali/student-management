@@ -1,72 +1,63 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-   @include('pertials.meta')
-    <title>@yield('title','Page Name')</title>
-    <!-- Favicon-->
 
 
-    @include('pertials.link')
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+   @include('partials.meta')
 
+   
 
+    <title>@yield('title','pageName')</title>
+     <!-- Bootstrap CSS -->
+    @include('partials.style')
+  </head>
+  <body>
 
-</head>
-<body class="theme-red">
-    <!-- Page Loader -->
- @include('pertials.page-loader')
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
+    <div class="wrapper"><!--wrapper start-->
 
+    {{--navbar start--}}
+    @include('partials.nav')
+    {{--navbar end--}}
 
-   @include('pertials.search-bar')
-
-
-    <!-- #END# Search Bar -->
-    <!-- Top Bar -->
-
-
-    @include('pertials.nav')
-
-
-
-    <!-- #Top Bar -->
-    <section>
-        <!-- Left Sidebar -->
-
-
-    @include('pertials.left-sidebar')
-
-
-
-        <!-- #END# Left Sidebar -->
-        <!-- Right Sidebar -->
-        @include('pertials.right-sidebar')
-        <!-- #END# Right Sidebar -->
-    </section>
-
-    <section class="content">
-        <div class="container-fluid">
-
-
-    @yield('main_content')
+{{--sidebar+content Start--}}
+<div class="container">
+    
+    <div class="row">
+        
+<div class="col-md-3">
+@include('partials.left-sidebar')
+</div>
 
 
 
 
-        </div>
-    </section>
+<div class="col-md-9">
 
-    <!-- Jquery Core Js -->
+@yield('main_content')
+
+  </div>
+
+ 
 
 
-   @include('pertials.script')
 
 
+</div>
+    </div>
 
-</body>
+    
+</div>
 
+
+{{--sidebar+content end--}}
+  
+   @include('partials.footer')
+</div><!--wrapper end-->
+   
+ @include('partials.script')
+    
+  </body>
 </html>
+   
+                               

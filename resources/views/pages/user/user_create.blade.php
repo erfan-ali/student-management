@@ -3,7 +3,7 @@
 @section('main_content')
 
 
-<h2 align="center">Create New User</h2>
+<h2 align="center">User Registration</h2>
 
  <div class="container-fluid px-4">
                         <div style="padding: 30px 60px;" class="card mb-4">

@@ -8,29 +8,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Admin Login</h3></div>
 
-    <h4 style="color:#ff0000">
-    <?php
-$exception = Session::get('exception');
-if($exception)
-{
-    echo $exception;
-    Session::put('exception','');
-}
-    ?>
-</h4>
 
-
-
-<h4 style="color:#00ff00">
-    <?php
-$message = Session::get('message');
-if($message)
-{
-    echo $message;
-    Session::put('message','');
-}
-?>
-</h4>
                                     <div class="card-body">
 
 

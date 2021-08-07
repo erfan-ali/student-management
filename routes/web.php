@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\StudentController;
@@ -21,11 +22,18 @@ Route::get('/', function () {
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('layouts.master2');
-});
 
-Route::get('/welcome', [AdminController::class, 'index'])->name('welcome');
+
+Route::get('/', [PagesController::class, 'index'])->name('home_page');
+Route::get('/all_teachers', [PagesController::class, 'all_teachers'])->name('all_teachers');
+Route::get('/all_students', [PagesController::class, 'all_students'])->name('all_students');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/welcome', [PagesController::class, 'welcome'])->name('welcome');
+
+
+
+
 Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
 
 //Authendicate

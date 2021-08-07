@@ -18,13 +18,8 @@ class AdminController extends Controller
     public function index()
 {
  
-     return view('pages.admin.welcome');
+    //
 }
-
-
-
-
-    
 
    
 public function admin_login()
