@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Teacher_image;
 use Illuminate\Http\Request;
 
-class PagesController extends Controller
+class TeacherImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,34 +14,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-       return view('home_page');
+        //
     }
-
-
- 
-
-
-public function all_students()
-    {
-       return view('pages.pages.all_students');
-    }
-
-
-public function about()
-    {
-       return view('pages.pages.about');
-    }
-
-    public function contact()
-    {
-       return view('pages.pages.contact');
-    }
-
-
-public function welcome(){
-     return view('pages.pages.welcome');
-}
-
 
     /**
      * Show the form for creating a new resource.
@@ -66,10 +41,10 @@ public function welcome(){
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Teacher_image $teacher_image)
     {
         //
     }
@@ -77,10 +52,10 @@ public function welcome(){
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Teacher_image $teacher_image)
     {
         //
     }
@@ -89,10 +64,10 @@ public function welcome(){
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Teacher_image $teacher_image)
     {
         //
     }
@@ -100,10 +75,10 @@ public function welcome(){
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Teacher_image $teacher_image)
     {
         //
     }

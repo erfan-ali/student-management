@@ -3,28 +3,65 @@
 @section('main_content')
   
 
- <div class="widget">
-      <h3 align="center">Teacher's List</h3>
-      <div class="row">
+{{--Sidebar+content start--}}
+
+<div class="container margin-top-20">
+  <div class="row">
 
 
 
- <div class="col-md-3">
-    <div class="card">
-  <img class="card-img-top feature-img" src="{{asset('public/images/teachers/'.'saiful.jpg')}}" alt="Card image">
-  <div class="card-body">
-    <h4 class="card-title">Headmaster</h4>
-    <p class="card-text">Md. Saiful Islam</p>
-    <a href="#" class="btn btn-outline-warning">See Profile</a>
+    <div class="col-md-4">
+@include('partials.sidebar')
+<a href="http://localhost:8000/">Home Page</a>
+    </div>
+
+
+
+
+
+                  <div class="col-md-8">
+
+
+
+                    <div class="widget">
+                        <h3 align="center">MOBILE</h3>
+                      <div class="row">
+
+          
+
+
+
+
+
+                        <div class="col-md-3">
+                          <div class="card">
+    <img class="card-img-top feacher-img" src="{{ asset('images/products/'.'1.png')  }}" alt="samsung galaxy">
+                          <div class="card-body">
+                        <h4 class="card-title">
+                      
+                        </h4>
+
+                        <p class="card-text">
+                        
+                        </p>
+                  <a href="#" class="btn btn-outline-success">See Profile</a>
+                              </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+                    </div>
+                </div>
+
+  
   </div>
-</div>
 
 </div>
-
-
-
-          </div>
-      
      
-      </div>
 	  @endsection

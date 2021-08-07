@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container margin-top-20"><!--container start-->
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{url('/')}}"><strong><h1 style="color:yellow;font-size:40px">Firoz Learning Home</h1></strong></a>
+    <a class="navbar-brand" href="{{url('/')}}"><strong><h1 style="color:#000000;font-size:32px">Firoz Learning Home</h1></strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,15 +50,9 @@
       </ul>
 
  
-      <form class="d-flex">
-       <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search">
-  <div class="input-group-append">
-    <button class="btn btn-success" type="submit">O</button> 
-  </div>
+  <div>
+ <img src="{{asset('public')}}/images/favicon.png" alt="karim"> 
 </div>
-
-      </form>
           
            <?php
 
@@ -68,10 +62,16 @@ if(isset($admin))
     echo "Now Login: ".' '. $admin.'<br />';
 }
     ?>
-
-<div>
- <img src="{{asset('public')}}/images/favicon.png" alt="karim"> 
+    <form class="d-flex">
+       <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-append">
+    <button class="btn btn-success" type="submit">O</button> 
+  </div>
 </div>
+
+      </form>
+
      
     </div>
   </div>
