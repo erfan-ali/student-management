@@ -13,7 +13,7 @@
 
   <a href="{{route('contact')}}" class="list-group-item list-group-item-action list-group-item-primary">Contact Us</a>
 
-  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">All Employee</a>
+  <a href="{{route('employee_teacher')}}" class="list-group-item list-group-item-action list-group-item-dark">All Teacher and Employee</a>
 
   <a href="{{route('welcome')}}" class="list-group-item list-group-item-action list-group-item-success">Documentation</a>
 </div>

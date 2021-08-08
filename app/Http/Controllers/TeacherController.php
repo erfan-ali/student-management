@@ -112,4 +112,10 @@ class TeacherController extends Controller
        $teacher->delete();
       return redirect()->route('teachers');
     }
+
+    public function employee_teacher()
+    {
+         $teachers=Teacher::orderBy('id','asc')->get();
+        return view('pages.teacher.employee_teacher')->with('teachers', $teachers);
+    }
 }

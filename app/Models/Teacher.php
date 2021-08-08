@@ -10,6 +10,6 @@ class Teacher extends Model
     use HasFactory;
     public function images()
     {
-return $this->hasMany('App\Teacher_image');
+return $this->hasMany('App\Models\Teacher_image');
     }
 }

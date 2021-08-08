@@ -44,6 +44,9 @@ Route::get('/logout', [SuperAdminController::class, 'logout'])->name('logout');
 Route::post('/admin-login-check', [AdminController::class, 'adminLoginCheck']);
 
 
+
+
+
 //students
 Route::get('/students', [StudentController::class, 'index'])->name('students');
 Route::get('/student_create', [StudentController::class, 'student_create'])->name('student_create');
@@ -75,3 +78,6 @@ Route::post('/teacher_store',[TeacherController::class,'teacher_store'])->name('
 Route::get('/teacher_edit{id}',[TeacherController::class,'teacher_edit'])->name('teacher_edit');
 Route::post('/teacher_update{id}',[TeacherController::class,'teacher_update'])->name('teacher_update');
 Route::post('/teacher_delete{id}',[TeacherController::class,'teacher_delete'])->name('teacher_delete');
+
+
+Route::get('/employee_teacher', [TeacherController::class, 'employee_teacher'])->name('employee_teacher');

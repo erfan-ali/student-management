@@ -14,8 +14,8 @@ class CreateTeacherImagesTable extends Migration
     public function up()
     {
         Schema::create('teacher_images', function (Blueprint $table) {
-            $table->id();
-            $table->string('index_id',20);
+           $table->id();
+            $table->string('teacher_id',20);
             $table->string('image');
             $table->timestamps();
         });
