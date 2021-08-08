@@ -45,7 +45,7 @@
 
   <div class="form-group">
     <label for="uname">Email:</label>
-    <input type="text" class="form-control" id="email" value="{{$teacher->mname}}"  placeholder="Enter Mother's Name" name="mname">
+    <input type="text" class="form-control" id="email" value="{{$teacher->mname}}"  placeholder="Enter Mother's Name" name="email">
   </div>
 
 <div class="form-group">
@@ -70,7 +70,7 @@
     <input type="text" class="form-control" value="{{$teacher->mobile}}"  id="mobile" placeholder="Enter Mobile No" name="mobile">
   </div>
 
-  <button type="submit" class="btn btn-primary">Update Student</button>
+  <button type="submit" class="btn btn-primary">Update Teacher</button>
 </form>
     </div>
    </div>

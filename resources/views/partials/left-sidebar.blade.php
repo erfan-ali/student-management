@@ -1,11 +1,19 @@
    <div class="list-group">
-  <a href="{{route('dashboard')}}" class="list-group-item list-group-item-action">Dashboard</a>
-  <a href="{{route('teachers')}}" class="list-group-item list-group-item-action list-group-item-success">Teachers</a>
-  <a href="{{route('all_students')}}" class="list-group-item list-group-item-action list-group-item-secondary">All students</a>
-  <a href="{{route('about')}}" class="list-group-item list-group-item-action list-group-item-info">About Us</a>
-  <a href="{{route('contact')}}" class="list-group-item list-group-item-action list-group-item-warning">Contact Us</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
-  <a href="{{route('welcome')}}" class="list-group-item list-group-item-action list-group-item-light">Documentation</a>
+  <a href="{{route('dashboard')}}" class="list-group-item list-group-item-success">Dashboard</a>
+
+  <a href="{{route('admin_login')}}" class="list-group-item list-group-item-action list-group-item-success">Admin Login</a>
+
+  <a href="{{route('index')}}" class="list-group-item list-group-item-action list-group-item-secondary">User Login</a>
+
+  <a href="{{route('user_create')}}" class="list-group-item list-group-item-action list-group-item-info">User Registration</a>
+
+  <a href="{{route('teacher_create')}}" class="list-group-item list-group-item-action list-group-item-success">Teacher Registration</a>
+
+  <a href="{{route('about')}}" class="list-group-item list-group-item-action list-group-item-danger">About Us</a>
+
+  <a href="{{route('contact')}}" class="list-group-item list-group-item-action list-group-item-primary">Contact Us</a>
+
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">All Employee</a>
+
+  <a href="{{route('welcome')}}" class="list-group-item list-group-item-action list-group-item-success">Documentation</a>
 </div>

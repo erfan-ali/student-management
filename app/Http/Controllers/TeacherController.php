@@ -69,9 +69,10 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teacher $teacher)
+    public function teacher_edit($id)
     {
-        //
+        $teacher=Teacher::find($id);
+        return view('pages.teacher.teacher_edit')->with('teacher',$teacher);
     }
 
     /**
@@ -81,7 +82,7 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function teacher_update(Request $request,$id)
     {
        $teacher=Teacher::find($id);
 
@@ -92,7 +93,7 @@ class TeacherController extends Controller
         $teacher->email=$request->email;
         $teacher->degree=$request->degree;
         $teacher->address=$request->address;
-      
+        
         $teacher->password=$request->password;
         $teacher->mobile=$request->mobile;
         $teacher->save();
@@ -105,8 +106,10 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teacher $teacher)
+    public function teacher_delete($id)
     {
-        //
+       $teacher=Teacher::find($id);
+       $teacher->delete();
+      return redirect()->route('teachers');
     }
 }
