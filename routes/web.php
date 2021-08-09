@@ -8,6 +8,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MonthlyPayController;
+use App\Http\Controllers\TeacherImageController;
 use App\Http\Controllers\Auth;
 
 /*
@@ -26,9 +27,13 @@ Route::get('/', function () {
 
 //pages
 Route::get('/', [PagesController::class, 'index'])->name('home_page');
+
 Route::get('/all_students', [PagesController::class, 'all_students'])->name('all_students');
+
 Route::get('/about', [PagesController::class, 'about'])->name('about');
+
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+
 Route::get('/welcome', [PagesController::class, 'welcome'])->name('welcome');
 
 
@@ -81,3 +86,11 @@ Route::post('/teacher_delete{id}',[TeacherController::class,'teacher_delete'])->
 
 
 Route::get('/employee_teacher', [TeacherController::class, 'employee_teacher'])->name('employee_teacher');
+
+//Images
+Route::get('images',[TeacherImageController::class,'index'])->name('images');
+Route::get('/image_create',[TeacherImageController::class,'image_create'])->name('image_create');
+Route::post('/image_store',[TeacherImageController::class,'image_store'])->name('image_store');
+Route::get('/image_edit{id}',[TeacherImageController::class,'image_edit'])->name('image_edit');
+Route::post('/image_update{id}',[TeacherImageController::class,'image_update'])->name('image_update');
+Route::post('/image_delete{id}',[TeacherImageController::class,'image_delete'])->name('image_delete');

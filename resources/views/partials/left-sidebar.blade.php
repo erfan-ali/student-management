@@ -9,9 +9,9 @@
 
   <a href="{{route('teacher_create')}}" class="list-group-item list-group-item-action list-group-item-success">Teacher Registration</a>
 
-  <a href="{{route('about')}}" class="list-group-item list-group-item-action list-group-item-danger">About Us</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">About Us</a>
 
-  <a href="{{route('contact')}}" class="list-group-item list-group-item-action list-group-item-primary">Contact Us</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Contact Us</a>
 
   <a href="{{route('employee_teacher')}}" class="list-group-item list-group-item-action list-group-item-dark">All Teacher and Employee</a>
 

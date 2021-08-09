@@ -14,7 +14,8 @@ class TeacherImageController extends Controller
      */
     public function index()
     {
-        //
+        $images=Teacher_image::orderBy('teacher_id','desc')->get();
+        return view('pages.teacher_image.images')->with('images', $images);
     }
 
     /**
@@ -22,9 +23,9 @@ class TeacherImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+  public function image_create()
     {
-        //
+        return view('pages.teacher_image.image_create');
     }
 
     /**
@@ -33,9 +34,15 @@ class TeacherImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function image_store(Request $request)
     {
-        //
+        $image=new Teacher_image();
+        
+        $image->teacher_id=$request->teacher_id;
+        $image->image=$request->image;
+        
+       $image->save();
+        return redirect()->route('images');
     }
 
     /**

@@ -13,7 +13,7 @@
     @include('partials.style')
   </head>
   <body>
-
+    
     <div class="wrapper"><!--wrapper start-->
 
     {{--navbar start--}}

@@ -3,7 +3,7 @@
 
 
 @extends('layouts.master')
-@section('title','login page')
+@section('title','login User')
 @section('main_content')
   <main>
                     <div class="container">
@@ -34,12 +34,12 @@
 
 
 <div class="form-group">
-    <label for="Email">Email:</label>
+    <label for="Email">1.Email:</label>
     <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email"required>
   </div>
 
   <div class="form-group">
-    <label for="pwd">Password:</label>
+    <label for="pwd">2.Password:</label>
     <input type="password" class="form-control" id="password" placeholder="Enter password" name="password"required>
   </div>
 

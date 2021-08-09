@@ -17,11 +17,11 @@
                                    {!! Form::open(['url' => '/admin-login-check']) !!}
                                             <div class="form-floating mb-3">
                                                 <input class="form-control"name="email" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Email address</label>
+                                                <label for="inputEmail">1.Email address</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="password" id="inputPassword" type="password" placeholder="Password" />
-                                                <label for="inputPassword">Password</label>
+                                                <label for="inputPassword">2.Password</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />

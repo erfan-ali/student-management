@@ -21,6 +21,7 @@
   @foreach($teacher->images as $image)
   <img class="card-img-top feature-img" src="{{asset('public/images/teachers/'. $image->image )}}">
   @endforeach
+  
   <div class="card-body">
     <h5 class="card-title">{{$teacher->designation}}</h5>
     <p class="card-text">{{$teacher->name}}</p>

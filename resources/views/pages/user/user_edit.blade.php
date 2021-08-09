@@ -1,5 +1,5 @@
  @extends('layouts.master')
-@section('title','user_create')
+@section('title','user_Update')
 @section('main_content')
 
 
@@ -21,27 +21,27 @@
     @csrf
 
 <div class="form-group">
-    <label for="uname">Name:</label>
+    <label for="uname">1.Name:</label>
     <input type="text" class="form-control"value="{{$user->name}}" id="name" placeholder="Enter Name" name="name">
   </div>
 
 <div class="form-group">
-    <label for="Email">Email:</label>
+    <label for="Email">2.Email:</label>
     <input type="text" class="form-control"value="{{$user->email}}" id="email" placeholder="Enter Email" name="email">
   </div>
 
   <div class="form-group">
-    <label for="pwd">Password:</label>
+    <label for="pwd">3.Password:</label>
     <input type="password" class="form-control" id="password"value="{{$user->password}}" placeholder="Enter password" name="password">
   </div>
 
   <div class="form-group">
-    <label for="address">Address:</label>
+    <label for="address">4.Address:</label>
     <input type="text" class="form-control"value="{{$user->address}}" id="password" placeholder="Enter address" name="address">
   </div>
 
 <div class="form-group">
-    <label for="pwd">Mobile:</label>
+    <label for="pwd">5.Mobile:</label>
     <input type="password" class="form-control" id="mobile"value="{{$user->mobile}}" placeholder="Enter Mobile No" name="mobile">
   </div>
 

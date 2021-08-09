@@ -1,4 +1,4 @@
- @extends('layouts.master')
+@extends('layouts.master')
 @section('title','All Students')
 @section('main_content')
   

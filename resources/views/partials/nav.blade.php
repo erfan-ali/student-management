@@ -6,15 +6,33 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li><li><a  href="{{url('/')}}/"><img src="{{asset('public')}}/images/home.png"height="30px"width="30px"></a></li></li>
+       <!--  <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url('/')}}"><strong>HOME</strong></a> -->
+        </li>
+
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('about')}}"><strong>About</strong></a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{route('contact')}}"><strong>Contact</strong></a>
         </li>
         
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Authentication
+            <strong>Authentication</strong>
           </a>
+
+
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{route('admin_login')}}">Admin Login</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -26,15 +44,17 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
           </ul>
+
+
         </li>
-       
-
-
-</li>
+      </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Website
+           <strong> Website</strong>
           </a>
+
+
+
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="https://moontasir.com/"target="__blank">Moontasir Mahmood</a></li>
            <li><hr class="dropdown-divider"></li>
@@ -44,9 +64,9 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://firozlearninghome.com/firozshah/"target="__blank">Firozshah School</a></li>
           </ul>
+
+
         </li>
-
-
       </ul>
 
  
@@ -59,9 +79,12 @@
 $admin=Session::get('name');
 if(isset($admin))
 {
-    echo "Now Login: ".' '. $admin.'<br />';
+    echo "<strong>Now Login:</strong>".' '. $admin.'<br />';
 }
     ?>
+
+
+
     <form class="d-flex">
        <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Search">

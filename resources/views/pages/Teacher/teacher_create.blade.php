@@ -30,19 +30,19 @@
 @csrf
 
   <div class="form-group">
-    <label for="teacherId">Teacher ID:</label>
+    <label for="teacherId">1.Teacher ID:</label>
     <input type="text" class="form-control" id="teacher_id" placeholder="Enter Teacher ID" name="teacher_id">
   </div>
 
 <div class="form-group">
-    <label for="indexId">Index ID:</label>
+    <label for="indexId">2.Index ID:</label>
     <input type="text" class="form-control" id="index_id" placeholder="Enter Index ID" name="index_id">
   </div>
 
  
 
 <div class="form-group">
-    <label for="teacherName">Teacher Name:</label>
+    <label for="teacherName">3.Teacher Name:</label>
     <input type="text" class="form-control" id="name" placeholder="Enter Teacher Name" name="name">
   </div>
 
@@ -51,35 +51,35 @@
 
 
 <div class="form-group">
-    <label for="designation">Designation:</label>
+    <label for="designation">4.Designation:</label>
     <input type="text" class="form-control" id="designation" placeholder="Enter Designation" name="designation">
   </div>
 
 
 
 <div class="form-group">
-    <label for="email">Email:</label>
+    <label for="email">5.Email:</label>
     <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
   </div>
 
 
  <div class="form-group">
-    <label for="degree">Qualification:</label>
+    <label for="degree">6.Qualification:</label>
     <input type="text" class="form-control" id="email" placeholder="Enter Qualification" name="degree">
   </div>
 
 <div class="form-group">
-    <label for="address">Address:</label>
+    <label for="address">7.Address:</label>
     <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address">
   </div>
 
   <div class="form-group">
-    <label for="password">Password:</label>
+    <label for="password">8.Password:</label>
     <input type="text" class="form-control" id="password" placeholder="Enter password" name="password">
   </div>
 
 <div class="form-group">
-    <label for="mobile">Mobile:</label>
+    <label for="mobile">9.Mobile:</label>
     <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" name="mobile">
   </div>
 
