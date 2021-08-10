@@ -62,9 +62,10 @@ class TeacherImageController extends Controller
      * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teacher_image $teacher_image)
+     public function image_edit($id)
     {
-        //
+        $image=Teacher_image::find($id);
+        return view('pages.teacher_image.image_edit')->with('image', $image);
     }
 
     /**
@@ -74,9 +75,14 @@ class TeacherImageController extends Controller
      * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teacher_image $teacher_image)
+   public function image_update(Request $request,$id)
     {
-        //
+       $image=Teacher_image::find($id);
+
+       $image->teacher_id=$request->teacher_id;
+        $image->image=$request->image;
+        $image->save();
+        return redirect()->route('images');
     }
 
     /**
