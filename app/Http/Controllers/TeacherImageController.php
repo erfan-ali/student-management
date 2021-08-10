@@ -91,8 +91,10 @@ class TeacherImageController extends Controller
      * @param  \App\Models\Teacher_image  $teacher_image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teacher_image $teacher_image)
+   public function image_delete($id)
     {
-        //
+        $image=Teacher_image::find($id);
+        $image->delete();
+       return redirect()->route('images');
     }
 }

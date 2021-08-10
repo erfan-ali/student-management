@@ -4,7 +4,7 @@
 
 
  <div class="widget">
-      <h3 align="center">Teachers and Employee List</h3>
+      <h1>Teachers and Employee List</h1>
       <div class="row">
 
 

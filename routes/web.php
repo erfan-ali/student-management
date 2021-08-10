@@ -27,13 +27,9 @@ Route::get('/', function () {
 
 //pages
 Route::get('/', [PagesController::class, 'index'])->name('home_page');
-
 Route::get('/all_students', [PagesController::class, 'all_students'])->name('all_students');
-
 Route::get('/about', [PagesController::class, 'about'])->name('about');
-
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
-
 Route::get('/welcome', [PagesController::class, 'welcome'])->name('welcome');
 
 

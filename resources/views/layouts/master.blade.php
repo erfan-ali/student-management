@@ -21,11 +21,12 @@
     {{--navbar end--}}
 
 {{--sidebar+content Start--}}
-<div class="container margin-top-20">
+<div class="container">
     
     <div class="row">
         
-<div class="col-md-3">
+<div class="col-md-3 margin-top-20">
+  <h4>Menu</h4>
 @include('partials.left-sidebar')
 </div>
 
